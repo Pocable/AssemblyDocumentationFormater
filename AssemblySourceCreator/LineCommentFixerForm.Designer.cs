@@ -35,6 +35,7 @@
             this.customSpacing = new System.Windows.Forms.CheckBox();
             this.amountSpacing = new System.Windows.Forms.NumericUpDown();
             this.startButton = new System.Windows.Forms.Button();
+            this.progressBar = new System.Windows.Forms.ProgressBar();
             ((System.ComponentModel.ISupportInitialize)(this.amountSpacing)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +88,7 @@
             // startButton
             // 
             this.startButton.Enabled = false;
-            this.startButton.Location = new System.Drawing.Point(74, 132);
+            this.startButton.Location = new System.Drawing.Point(74, 119);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(104, 43);
             this.startButton.TabIndex = 4;
@@ -95,11 +96,19 @@
             this.startButton.UseVisualStyleBackColor = true;
             this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
-            // LineCommentFixer
+            // progressBar
+            // 
+            this.progressBar.Location = new System.Drawing.Point(29, 168);
+            this.progressBar.Name = "progressBar";
+            this.progressBar.Size = new System.Drawing.Size(195, 23);
+            this.progressBar.TabIndex = 5;
+            // 
+            // LineCommentFixerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(259, 203);
+            this.Controls.Add(this.progressBar);
             this.Controls.Add(this.startButton);
             this.Controls.Add(this.amountSpacing);
             this.Controls.Add(this.customSpacing);
@@ -109,7 +118,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "LineCommentFixer";
+            this.Name = "LineCommentFixerForm";
             this.Text = "Line Comment Fixer";
             ((System.ComponentModel.ISupportInitialize)(this.amountSpacing)).EndInit();
             this.ResumeLayout(false);
@@ -125,5 +134,6 @@
         private System.Windows.Forms.CheckBox customSpacing;
         private System.Windows.Forms.NumericUpDown amountSpacing;
         private System.Windows.Forms.Button startButton;
+        private System.Windows.Forms.ProgressBar progressBar;
     }
 }
