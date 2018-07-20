@@ -1,5 +1,5 @@
 # Assembly Documentation Formater
-Makes nice looking formated assembly documentation. I use it for MIPS documentation.
+Makes nice looking assembly documentation and formats comments to look neater!
 
 ## Example:
 <pre>
