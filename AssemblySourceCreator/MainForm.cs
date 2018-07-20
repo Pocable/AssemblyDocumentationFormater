@@ -88,7 +88,7 @@ namespace AssemblySourceCreator
             maxLength = maxLength + 2;
             output = new String('#', maxLength + 2) + "\n";
             int titlePad = (maxLength - titleText.Length - 2) / 2;
-            output += "# " + new string(' ', titlePad) + titleText + (titleText.Length % 2 == 0 ? "" : " ") +  new string(' ', titlePad) + " #\n";
+            output += "# " + new string(' ', titlePad) + titleText + (titleText.Length % 2 == 0 ? " " : "") +  new string(' ', titlePad) + " #\n";
             output += new String('#', maxLength + 2) + "\n";
             String current;
 
