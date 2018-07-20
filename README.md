@@ -4,7 +4,7 @@ Makes nice looking formated assembly documentation. I use it for MIPS documentat
 ## Example:
 <pre>
 ############################################
-#             Binary Search               #
+#             Binary Search                #
 ############################################
 # Input:                                   #
 # $a0, array                               #
