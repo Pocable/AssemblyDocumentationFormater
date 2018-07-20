@@ -42,6 +42,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.forceSize = new System.Windows.Forms.CheckBox();
             this.forceSizeAmount = new System.Windows.Forms.NumericUpDown();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.forceSizeAmount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,7 +151,7 @@
             // forceSize
             // 
             this.forceSize.AutoSize = true;
-            this.forceSize.Location = new System.Drawing.Point(432, 33);
+            this.forceSize.Location = new System.Drawing.Point(432, 28);
             this.forceSize.Name = "forceSize";
             this.forceSize.Size = new System.Drawing.Size(76, 17);
             this.forceSize.TabIndex = 5;
@@ -160,16 +161,27 @@
             // 
             // forceSizeAmount
             // 
-            this.forceSizeAmount.Location = new System.Drawing.Point(410, 53);
+            this.forceSizeAmount.Location = new System.Drawing.Point(410, 48);
             this.forceSizeAmount.Name = "forceSizeAmount";
             this.forceSizeAmount.Size = new System.Drawing.Size(120, 20);
             this.forceSizeAmount.TabIndex = 6;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(415, 74);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 23);
+            this.button1.TabIndex = 13;
+            this.button1.Text = "File Modifier";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 622);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.forceSizeAmount);
             this.Controls.Add(this.forceSize);
             this.Controls.Add(this.label3);
@@ -211,6 +223,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox forceSize;
         private System.Windows.Forms.NumericUpDown forceSizeAmount;
+        private System.Windows.Forms.Button button1;
     }
 }
 

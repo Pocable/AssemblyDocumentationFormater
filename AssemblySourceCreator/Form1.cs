@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AssemblyDocumentationFormater;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -132,6 +133,12 @@ namespace AssemblySourceCreator
         private void forceSize_CheckedChanged(object sender, EventArgs e)
         {
             forceSizeAmount.Enabled = forceSize.Checked;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LineCommentFixer childForm = new LineCommentFixer();
+            childForm.Show();
         }
     }
 }
