@@ -133,7 +133,7 @@
             this.generate.Name = "generate";
             this.generate.Size = new System.Drawing.Size(263, 64);
             this.generate.TabIndex = 7;
-            this.generate.Text = "Generate Documentation";
+            this.generate.Text = "Format Documentation";
             this.generate.UseVisualStyleBackColor = true;
             this.generate.Click += new System.EventHandler(this.generate_Click);
             // 
