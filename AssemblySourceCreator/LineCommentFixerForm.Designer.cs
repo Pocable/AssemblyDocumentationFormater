@@ -1,6 +1,6 @@
 ﻿namespace AssemblyDocumentationFormater
 {
-    partial class LineCommentFixer
+    partial class LineCommentFixerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LineCommentFixer));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LineCommentFixerForm));
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.selectFile = new System.Windows.Forms.Button();
             this.selectedFileName = new System.Windows.Forms.Label();

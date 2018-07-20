@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AssemblyDocumentationFormater
 {
-    public partial class LineCommentFixer : Form
+    public partial class LineCommentFixerForm : Form
     {
-        public LineCommentFixer()
+        public LineCommentFixerForm()
         {
             InitializeComponent();
         }

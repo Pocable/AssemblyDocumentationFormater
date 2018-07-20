@@ -137,7 +137,7 @@ namespace AssemblySourceCreator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            LineCommentFixer childForm = new LineCommentFixer();
+            LineCommentFixerForm childForm = new LineCommentFixerForm();
             childForm.Show();
         }
     }
