@@ -183,8 +183,12 @@
             this.Controls.Add(this.UsedReg);
             this.Controls.Add(this.titleBox);
             this.Controls.Add(this.TitleLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Assembly Documentation Formater";
             ((System.ComponentModel.ISupportInitialize)(this.forceSizeAmount)).EndInit();
             this.ResumeLayout(false);
