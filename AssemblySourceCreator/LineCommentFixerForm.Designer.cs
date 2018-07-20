@@ -69,7 +69,7 @@
             // 
             this.customSpacing.AutoSize = true;
             this.customSpacing.Enabled = false;
-            this.customSpacing.Location = new System.Drawing.Point(75, 70);
+            this.customSpacing.Location = new System.Drawing.Point(75, 60);
             this.customSpacing.Name = "customSpacing";
             this.customSpacing.Size = new System.Drawing.Size(103, 17);
             this.customSpacing.TabIndex = 2;
@@ -80,7 +80,7 @@
             // amountSpacing
             // 
             this.amountSpacing.Enabled = false;
-            this.amountSpacing.Location = new System.Drawing.Point(69, 93);
+            this.amountSpacing.Location = new System.Drawing.Point(69, 83);
             this.amountSpacing.Name = "amountSpacing";
             this.amountSpacing.Size = new System.Drawing.Size(120, 20);
             this.amountSpacing.TabIndex = 3;
@@ -88,9 +88,9 @@
             // startButton
             // 
             this.startButton.Enabled = false;
-            this.startButton.Location = new System.Drawing.Point(74, 119);
+            this.startButton.Location = new System.Drawing.Point(74, 115);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(104, 43);
+            this.startButton.Size = new System.Drawing.Size(104, 42);
             this.startButton.TabIndex = 4;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;

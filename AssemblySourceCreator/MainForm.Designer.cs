@@ -39,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.returnBox = new System.Windows.Forms.TextBox();
             this.generate = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.forceSize = new System.Windows.Forms.CheckBox();
             this.forceSizeAmount = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
@@ -67,7 +66,7 @@
             // 
             this.UsedReg.AutoSize = true;
             this.UsedReg.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.UsedReg.Location = new System.Drawing.Point(131, 440);
+            this.UsedReg.Location = new System.Drawing.Point(131, 407);
             this.UsedReg.Name = "UsedReg";
             this.UsedReg.Size = new System.Drawing.Size(119, 20);
             this.UsedReg.TabIndex = 12;
@@ -76,7 +75,7 @@
             // usedRegBox
             // 
             this.usedRegBox.AcceptsReturn = true;
-            this.usedRegBox.Location = new System.Drawing.Point(28, 463);
+            this.usedRegBox.Location = new System.Drawing.Point(28, 430);
             this.usedRegBox.Multiline = true;
             this.usedRegBox.Name = "usedRegBox";
             this.usedRegBox.Size = new System.Drawing.Size(324, 127);
@@ -85,7 +84,7 @@
             // inputBox
             // 
             this.inputBox.AcceptsReturn = true;
-            this.inputBox.Location = new System.Drawing.Point(28, 112);
+            this.inputBox.Location = new System.Drawing.Point(28, 98);
             this.inputBox.Multiline = true;
             this.inputBox.Name = "inputBox";
             this.inputBox.Size = new System.Drawing.Size(324, 127);
@@ -95,7 +94,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(162, 89);
+            this.label1.Location = new System.Drawing.Point(162, 75);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 10;
@@ -104,7 +103,7 @@
             // outputBox
             // 
             this.outputBox.AcceptsReturn = true;
-            this.outputBox.Location = new System.Drawing.Point(28, 289);
+            this.outputBox.Location = new System.Drawing.Point(28, 261);
             this.outputBox.Multiline = true;
             this.outputBox.Name = "outputBox";
             this.outputBox.Size = new System.Drawing.Size(324, 127);
@@ -114,7 +113,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(162, 266);
+            this.label2.Location = new System.Drawing.Point(162, 238);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 20);
             this.label2.TabIndex = 11;
@@ -122,6 +121,7 @@
             // 
             // returnBox
             // 
+            this.returnBox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.returnBox.Location = new System.Drawing.Point(410, 107);
             this.returnBox.Multiline = true;
             this.returnBox.Name = "returnBox";
@@ -137,16 +137,6 @@
             this.generate.Text = "Format Documentation";
             this.generate.UseVisualStyleBackColor = true;
             this.generate.Click += new System.EventHandler(this.generate_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(389, 602);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(442, 13);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "Text will look wierd in the output. Copy and paste it into your source file and i" +
-    "t will look better.";
             // 
             // forceSize
             // 
@@ -168,11 +158,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(415, 74);
+            this.button1.Location = new System.Drawing.Point(113, 575);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(112, 23);
+            this.button1.Size = new System.Drawing.Size(159, 23);
             this.button1.TabIndex = 13;
-            this.button1.Text = "File Modifier";
+            this.button1.Text = "Line Comment Spacer Tool";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -184,7 +174,6 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.forceSizeAmount);
             this.Controls.Add(this.forceSize);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.generate);
             this.Controls.Add(this.returnBox);
             this.Controls.Add(this.outputBox);
@@ -220,7 +209,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox returnBox;
         private System.Windows.Forms.Button generate;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox forceSize;
         private System.Windows.Forms.NumericUpDown forceSizeAmount;
         private System.Windows.Forms.Button button1;
