@@ -40,112 +40,120 @@ namespace AssemblyDocumentationFormater
                 return;
             }
 
-            int longestLine = 0;
-            int lineCount = 0;
-
-            // Determine longest line
-            using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+            // I made this quickly for myself. Enjoy the overarching try/catch!
+            try
             {
-                using (StreamReader sr = new StreamReader(fs))
+
+                int longestLine = 0;
+                int lineCount = 0;
+
+                // Determine longest line
+                using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
                 {
-                    String current;
-                    bool seenText = false;
-                    while (!sr.EndOfStream)
+                    using (StreamReader sr = new StreamReader(fs))
                     {
-                        current = sr.ReadLine();
-                        if (!seenText)
+                        String current;
+                        bool seenText = false;
+                        while (!sr.EndOfStream)
                         {
-                            if (current.Contains(".text"))
+                            current = sr.ReadLine();
+                            if (!seenText)
                             {
-                                seenText = true;
+                                if (current.Contains(".text"))
+                                {
+                                    seenText = true;
+                                }
                             }
-                        }
-                        else
-                        {
-                            lineCount++;
-                            if (string.IsNullOrEmpty(current)) { continue; }
-                            if (Regex.Replace(current, @"\t|\n|\r", "")[0].Equals('#')) { continue; }
-                            current = current.Split('#')[0].Trim();
-                            if (longestLine < current.Length)
+                            else
                             {
-                                longestLine = current.Length;
+                                lineCount++;
+                                if (string.IsNullOrEmpty(current)) { continue; }
+                                if (Regex.Replace(current, @"\t|\n|\r", "")[0].Equals('#')) { continue; }
+                                current = current.Split('#')[0].Trim();
+                                if (longestLine < current.Length)
+                                {
+                                    longestLine = current.Length;
+                                }
                             }
                         }
                     }
                 }
-            }
 
-            if (customSpacing.Checked)
-            {
-                longestLine += (int) amountSpacing.Value;
-            }
-
-            if (longestLine <= 2)
-            {
-                MessageBox.Show("Longest line is less than the required max!");
-                return;
-            }
-
-            int linesDone = 0;
-
-            // Begin formating code
-            using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
-            {
-                using (FileStream fz = new FileStream(openFileDialog.FileName.Replace(".s", "") + "Out.s", FileMode.CreateNew, FileAccess.Write))
+                if (customSpacing.Checked)
                 {
-                    using (StreamWriter sw = new StreamWriter(fz))
-                    {
-                        using (StreamReader sr = new StreamReader(fs))
-                        {
-                            String current;
-                            String write;
-                            while (!sr.EndOfStream)
-                            {
-                                current = sr.ReadLine();
-                                write = current;
-                                // Check if its already a comment line or the line is empty
-                                if (!string.IsNullOrEmpty(current))
-                                {
-                                    if (!Regex.Replace(current, @"\t|\n|\r", "")[0].Equals('#'))
-                                    {
-                                        String[] parts = current.Split('#');
-                                        if (parts.Length > 1)
-                                        {
-                                            parts[0] = parts[0].TrimEnd();
-                                            parts[1] = parts[1].TrimStart();
-                                            write = parts[0];
-                                            if(longestLine + 4 - parts[0].Length > 0)
-                                            {
-                                                write += new string(' ', longestLine + 4 - parts[0].Length);
-                                                write += "# ";
-                                                write += parts[1];
+                    longestLine += (int)amountSpacing.Value;
+                }
 
-                                                // Add rest of the parts
-                                                for (int i = 2; i < parts.Length; i++)
+                if (longestLine <= 2)
+                {
+                    MessageBox.Show("Longest line is less than the required max!");
+                    return;
+                }
+
+                int linesDone = 0;
+
+                // Begin formating code
+                using (FileStream fs = new FileStream(openFileDialog.FileName, FileMode.Open, FileAccess.Read))
+                {
+                    using (FileStream fz = new FileStream(openFileDialog.FileName.Replace(".s", "") + "Out.s", FileMode.CreateNew, FileAccess.Write))
+                    {
+                        using (StreamWriter sw = new StreamWriter(fz))
+                        {
+                            using (StreamReader sr = new StreamReader(fs))
+                            {
+                                String current;
+                                String write;
+                                while (!sr.EndOfStream)
+                                {
+                                    current = sr.ReadLine();
+                                    write = current;
+                                    // Check if its already a comment line or the line is empty
+                                    if (!string.IsNullOrEmpty(current))
+                                    {
+                                        if (!Regex.Replace(current, @"\t|\n|\r", "")[0].Equals('#'))
+                                        {
+                                            String[] parts = current.Split('#');
+                                            if (parts.Length > 1)
+                                            {
+                                                parts[0] = parts[0].TrimEnd();
+                                                parts[1] = parts[1].TrimStart();
+                                                write = parts[0];
+                                                if (longestLine + 4 - parts[0].Length > 0)
                                                 {
-                                                    write += parts[i];
+                                                    write += new string(' ', longestLine + 4 - parts[0].Length);
+                                                    write += "# ";
+                                                    write += parts[1];
+
+                                                    // Add rest of the parts
+                                                    for (int i = 2; i < parts.Length; i++)
+                                                    {
+                                                        write += parts[i];
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    write = current;
                                                 }
                                             }
-                                            else
-                                            {
-                                                write = current;
-                                            }
+
                                         }
-
                                     }
+
+                                    sw.WriteLine(write);
+                                    linesDone++;
+                                    progressBar.Value = (linesDone / lineCount) * 100;
+
                                 }
-
-                                sw.WriteLine(write);
-                                linesDone++;
-                                progressBar.Value = (linesDone / lineCount) * 100;
-
                             }
                         }
                     }
                 }
-            }
 
-            MessageBox.Show("File modified sucessfully!");
+                MessageBox.Show("File modified sucessfully!");
+            }catch(Exception a)
+            {
+                MessageBox.Show(a.Message);
+            }
         }
 
         private void customSpacing_CheckedChanged(object sender, EventArgs e)
