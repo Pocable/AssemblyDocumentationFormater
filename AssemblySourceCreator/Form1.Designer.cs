@@ -69,7 +69,7 @@
             this.UsedReg.Location = new System.Drawing.Point(131, 440);
             this.UsedReg.Name = "UsedReg";
             this.UsedReg.Size = new System.Drawing.Size(119, 20);
-            this.UsedReg.TabIndex = 2;
+            this.UsedReg.TabIndex = 12;
             this.UsedReg.Text = "Used Registers";
             // 
             // usedRegBox
@@ -79,7 +79,7 @@
             this.usedRegBox.Multiline = true;
             this.usedRegBox.Name = "usedRegBox";
             this.usedRegBox.Size = new System.Drawing.Size(324, 127);
-            this.usedRegBox.TabIndex = 3;
+            this.usedRegBox.TabIndex = 4;
             // 
             // inputBox
             // 
@@ -88,7 +88,7 @@
             this.inputBox.Multiline = true;
             this.inputBox.Name = "inputBox";
             this.inputBox.Size = new System.Drawing.Size(324, 127);
-            this.inputBox.TabIndex = 5;
+            this.inputBox.TabIndex = 2;
             // 
             // label1
             // 
@@ -97,7 +97,7 @@
             this.label1.Location = new System.Drawing.Point(162, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 20);
-            this.label1.TabIndex = 4;
+            this.label1.TabIndex = 10;
             this.label1.Text = "Input";
             // 
             // outputBox
@@ -107,7 +107,7 @@
             this.outputBox.Multiline = true;
             this.outputBox.Name = "outputBox";
             this.outputBox.Size = new System.Drawing.Size(324, 127);
-            this.outputBox.TabIndex = 7;
+            this.outputBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -116,7 +116,7 @@
             this.label2.Location = new System.Drawing.Point(162, 266);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 20);
-            this.label2.TabIndex = 6;
+            this.label2.TabIndex = 11;
             this.label2.Text = "Output";
             // 
             // returnBox
@@ -132,7 +132,7 @@
             this.generate.Location = new System.Drawing.Point(551, 24);
             this.generate.Name = "generate";
             this.generate.Size = new System.Drawing.Size(263, 64);
-            this.generate.TabIndex = 9;
+            this.generate.TabIndex = 7;
             this.generate.Text = "Generate Documentation";
             this.generate.UseVisualStyleBackColor = true;
             this.generate.Click += new System.EventHandler(this.generate_Click);
@@ -143,7 +143,7 @@
             this.label3.Location = new System.Drawing.Point(389, 602);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(442, 13);
-            this.label3.TabIndex = 10;
+            this.label3.TabIndex = 9;
             this.label3.Text = "Text will look wierd in the output. Copy and paste it into your source file and i" +
     "t will look better.";
             // 
@@ -153,7 +153,7 @@
             this.forceSize.Location = new System.Drawing.Point(432, 33);
             this.forceSize.Name = "forceSize";
             this.forceSize.Size = new System.Drawing.Size(76, 17);
-            this.forceSize.TabIndex = 12;
+            this.forceSize.TabIndex = 5;
             this.forceSize.Text = "Force Size";
             this.forceSize.UseVisualStyleBackColor = true;
             this.forceSize.CheckedChanged += new System.EventHandler(this.forceSize_CheckedChanged);
@@ -163,7 +163,7 @@
             this.forceSizeAmount.Location = new System.Drawing.Point(410, 53);
             this.forceSizeAmount.Name = "forceSizeAmount";
             this.forceSizeAmount.Size = new System.Drawing.Size(120, 20);
-            this.forceSizeAmount.TabIndex = 13;
+            this.forceSizeAmount.TabIndex = 6;
             // 
             // Form1
             // 
