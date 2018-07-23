@@ -32,4 +32,4 @@ Makes nice looking assembly documentation and formats comments in code to look n
 
 ## Images:
 ![Assembly Documntation Formater](https://github.com/Pocable/AssemblyDocumentationFormater/blob/master/assemblyphoto.PNG?raw=true)
-![Line Comment Spacer Tool](https://github.com/Pocable/AssemblyDocumentationFormater/blob/master/linecommentspacer?raw=true)
+![Line Comment Spacer Tool](https://github.com/Pocable/AssemblyDocumentationFormater/blob/master/linecommentspacertool.PNG?raw=true)
