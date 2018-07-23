@@ -69,15 +69,7 @@ namespace AssemblySourceCreator
 
             if (forceSize.Checked)
             {
-                if(forceSizeAmount.Value > maxLength)
-                {
-                    maxLength = (int)forceSizeAmount.Value;
-                }
-                else
-                {
-                    returnBox.Text = "Force size too small to fit formating!";
-                    return;
-                }
+                maxLength += (int)forceSizeAmount.Value;
             }
 
             if (titleText.Length % 2 == 0)

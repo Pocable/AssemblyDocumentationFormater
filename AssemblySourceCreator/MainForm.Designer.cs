@@ -144,9 +144,9 @@
             this.forceSize.AutoSize = true;
             this.forceSize.Location = new System.Drawing.Point(432, 28);
             this.forceSize.Name = "forceSize";
-            this.forceSize.Size = new System.Drawing.Size(76, 17);
+            this.forceSize.Size = new System.Drawing.Size(81, 17);
             this.forceSize.TabIndex = 5;
-            this.forceSize.Text = "Force Size";
+            this.forceSize.Text = "Add Length";
             this.forceSize.UseVisualStyleBackColor = true;
             this.forceSize.CheckedChanged += new System.EventHandler(this.forceSize_CheckedChanged);
             // 
