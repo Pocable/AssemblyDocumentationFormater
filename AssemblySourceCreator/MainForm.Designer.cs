@@ -50,7 +50,7 @@
             // 
             this.TitleLabel.AutoSize = true;
             this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.TitleLabel.Location = new System.Drawing.Point(131, 20);
+            this.TitleLabel.Location = new System.Drawing.Point(132, 20);
             this.TitleLabel.Name = "TitleLabel";
             this.TitleLabel.Size = new System.Drawing.Size(122, 20);
             this.TitleLabel.TabIndex = 0;
@@ -95,7 +95,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(162, 75);
+            this.label1.Location = new System.Drawing.Point(168, 74);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 20);
             this.label1.TabIndex = 10;

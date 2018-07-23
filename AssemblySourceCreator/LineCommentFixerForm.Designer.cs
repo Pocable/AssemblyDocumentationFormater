@@ -69,11 +69,11 @@
             // 
             this.customSpacing.AutoSize = true;
             this.customSpacing.Enabled = false;
-            this.customSpacing.Location = new System.Drawing.Point(75, 60);
+            this.customSpacing.Location = new System.Drawing.Point(83, 60);
             this.customSpacing.Name = "customSpacing";
-            this.customSpacing.Size = new System.Drawing.Size(103, 17);
+            this.customSpacing.Size = new System.Drawing.Size(81, 17);
             this.customSpacing.TabIndex = 2;
-            this.customSpacing.Text = "Custom Spacing";
+            this.customSpacing.Text = "Add Length";
             this.customSpacing.UseVisualStyleBackColor = true;
             this.customSpacing.CheckedChanged += new System.EventHandler(this.customSpacing_CheckedChanged);
             // 
@@ -119,7 +119,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LineCommentFixerForm";
-            this.Text = "Line Comment Fixer";
+            this.Text = "Line Comment Spacer Tool";
             ((System.ComponentModel.ISupportInitialize)(this.amountSpacing)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
