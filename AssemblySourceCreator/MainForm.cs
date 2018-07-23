@@ -120,16 +120,14 @@ namespace AssemblySourceCreator
             if (endDocGen.Checked)
             {
                 output += "\n\n";
+                titlePad -= 2;
                 output += new String('#', maxLength + 2) + "\n";
-                titlePad -= 1;
                 output += "# " + new string(' ', titlePad) + "End " +  titleText + (maxLength % 2 == 0 ? " " : "") + new string(' ', titlePad) + " #\n";
                 output += new String('#', maxLength + 2) + "\n";
 
             }
 
             returnBox.Lines = output.Split('\n');
-
-            Console.WriteLine(output);
         }
 
         private void forceSize_CheckedChanged(object sender, EventArgs e)

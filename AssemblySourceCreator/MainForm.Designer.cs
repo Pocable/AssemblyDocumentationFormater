@@ -170,7 +170,7 @@
             // endDocGen
             // 
             this.endDocGen.AutoSize = true;
-            this.endDocGen.Location = new System.Drawing.Point(409, 75);
+            this.endDocGen.Location = new System.Drawing.Point(409, 74);
             this.endDocGen.Name = "endDocGen";
             this.endDocGen.Size = new System.Drawing.Size(136, 17);
             this.endDocGen.TabIndex = 14;
