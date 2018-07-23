@@ -88,7 +88,7 @@ namespace AssemblySourceCreator
             maxLength = maxLength + 2;
             output = new String('#', maxLength + 2) + "\n";
             int titlePad = (maxLength - titleText.Length - 2) / 2;
-            output += "# " + new string(' ', titlePad) + titleText + (titleText.Length % 2 == 0 ? " " : "") +  new string(' ', titlePad) + " #\n";
+            output += "# " + new string(' ', titlePad) + titleText + (maxLength % 2 == 0 ? " " : "") +  new string(' ', titlePad) + " #\n";
             output += new String('#', maxLength + 2) + "\n";
             String current;
 
@@ -123,6 +123,16 @@ namespace AssemblySourceCreator
                 }
 
                 output += new String('#', maxLength + 2) + "\n";
+            }
+
+            if (endDocGen.Checked)
+            {
+                output += "\n\n";
+                output += new String('#', maxLength + 2) + "\n";
+                titlePad -= 1;
+                output += "# " + new string(' ', titlePad) + "End " +  titleText + (maxLength % 2 == 0 ? " " : "") + new string(' ', titlePad) + " #\n";
+                output += new String('#', maxLength + 2) + "\n";
+
             }
 
             returnBox.Lines = output.Split('\n');

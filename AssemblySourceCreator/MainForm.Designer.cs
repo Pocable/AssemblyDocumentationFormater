@@ -42,6 +42,7 @@
             this.forceSize = new System.Windows.Forms.CheckBox();
             this.forceSizeAmount = new System.Windows.Forms.NumericUpDown();
             this.button1 = new System.Windows.Forms.Button();
+            this.endDocGen = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.forceSizeAmount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -166,11 +167,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // endDocGen
+            // 
+            this.endDocGen.AutoSize = true;
+            this.endDocGen.Location = new System.Drawing.Point(409, 75);
+            this.endDocGen.Name = "endDocGen";
+            this.endDocGen.Size = new System.Drawing.Size(136, 17);
+            this.endDocGen.TabIndex = 14;
+            this.endDocGen.Text = "Generate End Function";
+            this.endDocGen.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 622);
+            this.Controls.Add(this.endDocGen);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.forceSizeAmount);
             this.Controls.Add(this.forceSize);
@@ -212,6 +224,7 @@
         private System.Windows.Forms.CheckBox forceSize;
         private System.Windows.Forms.NumericUpDown forceSizeAmount;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.CheckBox endDocGen;
     }
 }
 
