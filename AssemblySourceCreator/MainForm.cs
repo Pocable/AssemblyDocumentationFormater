@@ -72,46 +72,50 @@ namespace AssemblySourceCreator
                 maxLength += (int)forceSizeAmount.Value;
             }
 
-            if (titleText.Length % 2 == 0)
+            if (endDocGen.Checked)
             {
-                titleText += "  ";
+                if(maxLength - 4 < titleText.Length)
+                {
+                    maxLength = titleText.Length + 4;
+                }
             }
-            // Add padding for max length and now format.
-            maxLength = maxLength + 2;
-            output = new String('#', maxLength + 2) + "\n";
-            int titlePad = (maxLength - titleText.Length - 2) / 2;
-            output += "# " + new string(' ', titlePad) + titleText + (maxLength % 2 == 0 ? " " : "") +  new string(' ', titlePad) + " #\n";
-            output += new String('#', maxLength + 2) + "\n";
+
+
+            // Add added #_ and now format.
+            maxLength += 4; // Increase to include #_ and _#
+            output = new String('#', maxLength) + "\n";
+            output += "# " + centerText(titleText, maxLength - 4) + " #\n";
+            output += new String('#', maxLength) + "\n";
             String current;
 
             if (!string.IsNullOrEmpty(inputText)) { 
-                output += "# Input:" + new string(' ', maxLength - "# Input:".Length) + " #\n";
+                output += "# Input:" + new string(' ', maxLength - "# Input:".Length - 2) + " #\n";
                 foreach (String a in inputTextEntries)
                 {
                     current = Regex.Replace(a, @"\t|\n|\r", "");
-                    output += "# " + current + new string(' ', maxLength - current.Length - 2) + " #\n";
+                    output += "# " + current + new string(' ', maxLength - current.Length - 4) + " #\n";
                 }
-                output += new String('#', maxLength + 2) + "\n";
+                output += new String('#', maxLength) + "\n";
             }
 
             if (!string.IsNullOrEmpty(outputText))
             {
-                output += "# Output:" + new string(' ', maxLength - "# Output:".Length) + " #\n";
+                output += "# Output:" + new string(' ', maxLength - "# Output:".Length - 2) + " #\n";
                 foreach (String a in outputTextEntries)
                 {
                     current = Regex.Replace(a, @"\t|\n|\r", "");
-                    output += "# " + current + new string(' ', maxLength - current.Length - 2) + " #\n";
+                    output += "# " + current + new string(' ', maxLength - current.Length - 4) + " #\n";
                 }
-                output += new String('#', maxLength + 2) + "\n";
+                output += new String('#', maxLength) + "\n";
             }
 
             if (!string.IsNullOrEmpty(usedRegText))
             {
-                output += "# Used Registers:" + new string(' ', maxLength - "# Used Registers:".Length) + " #\n";
+                output += "# Used Registers:" + new string(' ', maxLength - "# Used Registers:".Length - 2) + " #\n";
                 foreach (String a in usedRegEntries)
                 {
                     current = Regex.Replace(a, @"\t|\n|\r", "");
-                    output += "# " + current + new string(' ', maxLength - current.Length - 2) + " #\n";
+                    output += "# " + current + new string(' ', maxLength - current.Length - 4) + " #\n";
                 }
 
                 output += new String('#', maxLength + 2) + "\n";
@@ -120,10 +124,9 @@ namespace AssemblySourceCreator
             if (endDocGen.Checked)
             {
                 output += "\n\n";
-                titlePad -= 2;
-                output += new String('#', maxLength + 2) + "\n";
-                output += "# " + new string(' ', titlePad) + "End " +  titleText + (maxLength % 2 == 0 ? " " : "") + new string(' ', titlePad) + " #\n";
-                output += new String('#', maxLength + 2) + "\n";
+                output += new String('#', maxLength) + "\n";
+                output += "# " + centerText("End " + titleText, maxLength - 4) + " #\n";
+                output += new String('#', maxLength) + "\n";
 
             }
 
@@ -139,6 +142,31 @@ namespace AssemblySourceCreator
         {
             LineCommentFixerForm childForm = new LineCommentFixerForm();
             childForm.Show();
+        }
+
+
+        /// <summary>
+        /// Generate centered text in a given space.
+        /// </summary>
+        /// <param name="text">The text to center.</param>
+        /// <param name="space">The space provided.</param>
+        /// <returns>Returns the modified string.</returns>
+        private String centerText(string text, int space)
+        {
+            if(space < text.Length)
+            {
+                throw new ArgumentException($"Not enough space for centered string. Difference of {space - text.Length}");
+            }
+
+
+            int pad = (space - text.Length) / 2;
+            Console.WriteLine(pad);
+            if ((space - text.Length) % 2 != 0)
+            {
+                text += " ";
+            }
+
+            return new string(' ', pad) + text + new string(' ', pad);
         }
     }
 }
