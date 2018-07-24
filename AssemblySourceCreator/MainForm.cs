@@ -118,7 +118,7 @@ namespace AssemblySourceCreator
                     output += "# " + current + new string(' ', maxLength - current.Length - 4) + " #\n";
                 }
 
-                output += new String('#', maxLength + 2) + "\n";
+                output += new String('#', maxLength) + "\n";
             }
 
             if (endDocGen.Checked)
