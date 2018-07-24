@@ -160,7 +160,6 @@ namespace AssemblySourceCreator
 
 
             int pad = (space - text.Length) / 2;
-            Console.WriteLine(pad);
             if ((space - text.Length) % 2 != 0)
             {
                 text += " ";
