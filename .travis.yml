@@ -3,3 +3,4 @@ solution: AssemblySourceCreator.sln
 dotnet: 1.1.5
 script:
  - dotnet restore
+ - msbuild /p:Configuration=Release AssemblySourceCreator.sln
