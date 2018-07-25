@@ -112,7 +112,6 @@
   <ItemGroup>
     <Content Include="assemblyDoc.ico" />
     <Content Include="logo.ico" />
-    <None Include="Resources\%24this.Icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
