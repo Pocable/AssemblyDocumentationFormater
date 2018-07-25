@@ -1,2 +1,5 @@
 language: csharp
 solution: AssemblySourceCreator.sln
+dotnet: 1.1.5
+script:
+ - dotnet restore
