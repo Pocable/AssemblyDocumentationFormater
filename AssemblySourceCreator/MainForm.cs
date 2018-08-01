@@ -167,5 +167,11 @@ namespace AssemblySourceCreator
 
             return new string(' ', pad) + text + new string(' ', pad);
         }
+
+        private void buttonStackGenerator_Click(object sender, EventArgs e)
+        {
+            StackGeneratorForm childForm = new StackGeneratorForm();
+            childForm.Show();
+        }
     }
 }
