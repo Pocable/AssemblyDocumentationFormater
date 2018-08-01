@@ -39,12 +39,14 @@
             this.checkBoxRa = new System.Windows.Forms.CheckBox();
             this.buttonGenerateStack = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.checkBoxGen = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // checkBoxS0
             // 
             this.checkBoxS0.AutoSize = true;
-            this.checkBoxS0.Location = new System.Drawing.Point(53, 126);
+            this.checkBoxS0.Location = new System.Drawing.Point(51, 93);
             this.checkBoxS0.Name = "checkBoxS0";
             this.checkBoxS0.Size = new System.Drawing.Size(37, 17);
             this.checkBoxS0.TabIndex = 0;
@@ -54,7 +56,7 @@
             // checkBoxS1
             // 
             this.checkBoxS1.AutoSize = true;
-            this.checkBoxS1.Location = new System.Drawing.Point(53, 149);
+            this.checkBoxS1.Location = new System.Drawing.Point(51, 116);
             this.checkBoxS1.Name = "checkBoxS1";
             this.checkBoxS1.Size = new System.Drawing.Size(37, 17);
             this.checkBoxS1.TabIndex = 1;
@@ -64,16 +66,16 @@
             // returnBox
             // 
             this.returnBox.Font = new System.Drawing.Font("Courier New", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.returnBox.Location = new System.Drawing.Point(227, 12);
+            this.returnBox.Location = new System.Drawing.Point(214, 12);
             this.returnBox.Multiline = true;
             this.returnBox.Name = "returnBox";
-            this.returnBox.Size = new System.Drawing.Size(318, 385);
+            this.returnBox.Size = new System.Drawing.Size(331, 385);
             this.returnBox.TabIndex = 9;
             // 
             // checkBoxS3
             // 
             this.checkBoxS3.AutoSize = true;
-            this.checkBoxS3.Location = new System.Drawing.Point(53, 195);
+            this.checkBoxS3.Location = new System.Drawing.Point(51, 162);
             this.checkBoxS3.Name = "checkBoxS3";
             this.checkBoxS3.Size = new System.Drawing.Size(37, 17);
             this.checkBoxS3.TabIndex = 11;
@@ -83,7 +85,7 @@
             // checkBoxS2
             // 
             this.checkBoxS2.AutoSize = true;
-            this.checkBoxS2.Location = new System.Drawing.Point(53, 172);
+            this.checkBoxS2.Location = new System.Drawing.Point(51, 139);
             this.checkBoxS2.Name = "checkBoxS2";
             this.checkBoxS2.Size = new System.Drawing.Size(37, 17);
             this.checkBoxS2.TabIndex = 10;
@@ -93,7 +95,7 @@
             // checkBoxS5
             // 
             this.checkBoxS5.AutoSize = true;
-            this.checkBoxS5.Location = new System.Drawing.Point(124, 162);
+            this.checkBoxS5.Location = new System.Drawing.Point(122, 129);
             this.checkBoxS5.Name = "checkBoxS5";
             this.checkBoxS5.Size = new System.Drawing.Size(37, 17);
             this.checkBoxS5.TabIndex = 13;
@@ -103,7 +105,7 @@
             // checkBoxS4
             // 
             this.checkBoxS4.AutoSize = true;
-            this.checkBoxS4.Location = new System.Drawing.Point(124, 139);
+            this.checkBoxS4.Location = new System.Drawing.Point(122, 106);
             this.checkBoxS4.Name = "checkBoxS4";
             this.checkBoxS4.Size = new System.Drawing.Size(37, 17);
             this.checkBoxS4.TabIndex = 12;
@@ -113,7 +115,7 @@
             // checkBoxRa
             // 
             this.checkBoxRa.AutoSize = true;
-            this.checkBoxRa.Location = new System.Drawing.Point(124, 185);
+            this.checkBoxRa.Location = new System.Drawing.Point(122, 152);
             this.checkBoxRa.Name = "checkBoxRa";
             this.checkBoxRa.Size = new System.Drawing.Size(35, 17);
             this.checkBoxRa.TabIndex = 14;
@@ -122,7 +124,7 @@
             // 
             // buttonGenerateStack
             // 
-            this.buttonGenerateStack.Location = new System.Drawing.Point(25, 228);
+            this.buttonGenerateStack.Location = new System.Drawing.Point(23, 282);
             this.buttonGenerateStack.Name = "buttonGenerateStack";
             this.buttonGenerateStack.Size = new System.Drawing.Size(168, 53);
             this.buttonGenerateStack.TabIndex = 15;
@@ -133,17 +135,38 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 99);
+            this.label1.Location = new System.Drawing.Point(20, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(188, 13);
             this.label1.TabIndex = 16;
             this.label1.Text = "Select Registers Needing to be Saved";
+            // 
+            // checkBoxGen
+            // 
+            this.checkBoxGen.AutoSize = true;
+            this.checkBoxGen.Location = new System.Drawing.Point(36, 233);
+            this.checkBoxGen.Name = "checkBoxGen";
+            this.checkBoxGen.Size = new System.Drawing.Size(145, 17);
+            this.checkBoxGen.TabIndex = 17;
+            this.checkBoxGen.Text = "Generate Documentation";
+            this.checkBoxGen.UseVisualStyleBackColor = true;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(61, 207);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(87, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Optional Settings";
             // 
             // StackGeneratorForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(557, 409);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.checkBoxGen);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.buttonGenerateStack);
             this.Controls.Add(this.checkBoxRa);
@@ -176,5 +199,7 @@
         private System.Windows.Forms.CheckBox checkBoxRa;
         private System.Windows.Forms.Button buttonGenerateStack;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox checkBoxGen;
+        private System.Windows.Forms.Label label2;
     }
 }
