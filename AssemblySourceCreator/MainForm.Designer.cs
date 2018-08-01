@@ -44,6 +44,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.endDocGen = new System.Windows.Forms.CheckBox();
             this.buttonStackGenerator = new System.Windows.Forms.Button();
+            this.buttonClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.forceSizeAmount)).BeginInit();
             this.SuspendLayout();
             // 
@@ -127,7 +128,7 @@
             this.returnBox.Location = new System.Drawing.Point(410, 107);
             this.returnBox.Multiline = true;
             this.returnBox.Name = "returnBox";
-            this.returnBox.Size = new System.Drawing.Size(404, 491);
+            this.returnBox.Size = new System.Drawing.Size(404, 474);
             this.returnBox.TabIndex = 8;
             // 
             // generate
@@ -188,11 +189,22 @@
             this.buttonStackGenerator.UseVisualStyleBackColor = true;
             this.buttonStackGenerator.Click += new System.EventHandler(this.buttonStackGenerator_Click);
             // 
+            // buttonClear
+            // 
+            this.buttonClear.Location = new System.Drawing.Point(575, 587);
+            this.buttonClear.Name = "buttonClear";
+            this.buttonClear.Size = new System.Drawing.Size(75, 23);
+            this.buttonClear.TabIndex = 16;
+            this.buttonClear.Text = "Clear All";
+            this.buttonClear.UseVisualStyleBackColor = true;
+            this.buttonClear.Click += new System.EventHandler(this.buttonClear_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(839, 622);
+            this.Controls.Add(this.buttonClear);
             this.Controls.Add(this.buttonStackGenerator);
             this.Controls.Add(this.endDocGen);
             this.Controls.Add(this.button1);
@@ -238,6 +250,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.CheckBox endDocGen;
         private System.Windows.Forms.Button buttonStackGenerator;
+        private System.Windows.Forms.Button buttonClear;
     }
 }
 

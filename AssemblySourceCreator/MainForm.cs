@@ -173,5 +173,14 @@ namespace AssemblySourceCreator
             StackGeneratorForm childForm = new StackGeneratorForm();
             childForm.Show();
         }
+
+        private void buttonClear_Click(object sender, EventArgs e)
+        {
+            titleBox.Text = "";
+            outputBox.Text = "";
+            inputBox.Text = "";
+            returnBox.Text = "";
+            usedRegBox.Text = "";
+        }
     }
 }
